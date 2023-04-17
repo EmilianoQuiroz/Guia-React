@@ -13,3 +13,5 @@
 - Git
 - Node
 ## Temas:
+1. Javascript para React:
+ - Variables
