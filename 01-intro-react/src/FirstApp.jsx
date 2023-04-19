@@ -29,10 +29,11 @@ const funcion = (a,b)=> {
 }
 
 // Componente funcional
-export const FirstApp = () => {
+export const FirstApp = ( { title } ) => {
+
   return (
     <>
-      <h1> Santiago Quiroz </h1>
+      <h1> { title } </h1>
       <h2> Ingeniero de software </h2>
       {/**
        * De esta manera podemos pasar un objeto como varible 
