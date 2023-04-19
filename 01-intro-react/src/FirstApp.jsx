@@ -1,3 +1,6 @@
+// Importamos Proptypes
+// Por defecto en vite no viene instalada asiq ue hay que instalarlo
+import PropTypes from 'prop-types'; // Con PropTypes podemos definirle el tipo a las properties
 import React from 'react'
 // export function App() {
 //     return (
@@ -29,12 +32,12 @@ const funcion = (a,b)=> {
 }
 
 // Componente funcional
-export const FirstApp = ( { title } ) => {
+export const FirstApp = ( { title, subTitle } ) => {
 
   return (
     <>
       <h1> { title } </h1>
-      <h2> Ingeniero de software </h2>
+      <h2> { subTitle } </h2>
       {/**
        * De esta manera podemos pasar un objeto como varible 
        * dentro de nuestro functional component
@@ -44,4 +47,16 @@ export const FirstApp = ( { title } ) => {
       {/* <h2>{funcion(3,6)}</h2> */}
     </>
   )
+}
+
+//Definimos las proptypes
+/**
+ * Con estas proptypes le decimos a dato que hora va a tener un  tipo especifico
+ * ahora este pasaria a tener una especie de tipado estricto
+ * Esto cuando trabajamos con typescript ya no es necesario
+ * Con .isRequired definimos que el dato tiene que ser requerido obligatoriamente 
+ */
+FirstApp.propType = {
+  title: PropTypes.string.isRequired,
+  subTitle: PropTypes.string
 }
