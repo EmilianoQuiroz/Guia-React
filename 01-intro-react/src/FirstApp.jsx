@@ -35,7 +35,7 @@ const funcion = (a,b)=> {
 export const FirstApp = ( { 
   /** Podemos definir los valores de las props */  
   title = 'Santiago Quiroz',
-  subTitle = 'Desarrollador Backend'
+  subTitle = 'Desarrollador Fullstack'
    } ) => {
 
   return (
