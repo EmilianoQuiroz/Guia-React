@@ -32,7 +32,11 @@ const funcion = (a,b)=> {
 }
 
 // Componente funcional
-export const FirstApp = ( { title, subTitle } ) => {
+export const FirstApp = ( { 
+  /** Podemos definir los valores de las props */  
+  title = 'Santiago Quiroz',
+  subTitle = 'Desarrollador Backend'
+   } ) => {
 
   return (
     <>
@@ -59,4 +63,13 @@ export const FirstApp = ( { title, subTitle } ) => {
 FirstApp.propType = {
   title: PropTypes.string.isRequired,
   subTitle: PropTypes.string
+}
+
+/**
+ * Podemos definir props por defecto, esto se mostrara en caso de que no se asigne
+ * ningun valor a nuestros props
+ */
+FirstApp.deafaultProps = {
+  title: 'No hay titulo',
+  subTitle: 'No hay subtitulo'
 }
