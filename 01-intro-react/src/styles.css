@@ -10,5 +10,7 @@ html, body {
 button {
     padding: 15px;
     font-size: 1.3rem;
-
+    color: #fff;
+    background-color: #660bbb;
+    border: 1px solid;
 }
