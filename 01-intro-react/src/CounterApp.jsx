@@ -14,14 +14,26 @@ export const CounterApp = ({ value }) => {
          */
         setCounter( counter + 1);
     }
+    /**
+     * Funcion para restar una unidad
+     */
+    const restarUnidad = () => {
+        setCounter( counter - 1)
+    }
+    /**
+     * Funcion para resetar contador
+     */
+    const resetCounter = () => {
+        setCounter( counter - counter )
+    }
 
     return (
     <>
         <h1>CounterApp</h1>
         <h2> { counter } </h2>
-        <button onClick={ sumarUnidad }>
-            +1
-        </button>
+        <button onClick={ sumarUnidad }> +1</button>
+        <button onClick={ restarUnidad }> -1</button>
+        <button onClick={ resetCounter }> Reset </button>
     </>
     );
 }
